@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+<button id="connect">
+Connect
+</button>
+  <script src="https://static.pulsevision.io/sdk/v2.0.4/pulsevision.umd.js"></script>
+  <script>
+  
+document.addEventListener('DOMContentLoaded', function() {
+const pvClient = new window.PulseVision.Producer({
+  domain: 'https://app.pulsevision.io',
+  apiToken: "CvKtMwRpZgHbYsXl9oEq1",
+  roomName: "valeriya.novikova",
+  meta: {username: "valeriya.novikova@creditkasa.ua"},
+  debug: true,
+});
+document.getElementById('connect').addEventListener('click', (event) => {
+pvClient.connect();
+})
+});
+  </script>
+</body>
+</html>
